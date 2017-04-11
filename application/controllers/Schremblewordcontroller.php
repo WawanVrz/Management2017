@@ -8,6 +8,7 @@ class Schremblewordcontroller extends CI_Controller {
 		parent::__construct();
 
 		$this->load->model('m_schremble');
+		$this->load->model('m_soal');
 		$this->load->helper('url');
 
 		if($this->session->userdata('status') != "login"){
@@ -17,6 +18,8 @@ class Schremblewordcontroller extends CI_Controller {
 
 	public function listview()
 	{
+		$data['soal1'] = $this->m_soal->tampil_data_public1()->result_array();
+		$data['soal2'] = $this->m_soal->tampil_data_public2()->result_array();
 		$data['datascw'] = $this->m_schremble->tampil_data()->result();
 		$this->load->view('adminview/viewschremblewords',$data);
 	}

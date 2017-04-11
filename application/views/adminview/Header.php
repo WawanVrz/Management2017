@@ -23,11 +23,14 @@
   
   <link rel="stylesheet" href="assets/dashboard/plugins/datatables/dataTables.bootstrap.css">
 
+  <link rel="stylesheet" href="assets/time/jquery.countdown.css">
+
   <!-- This is what you need -->
   <script src="assets/sweatalert/dist/sweetalert.js"></script>
   <link rel="stylesheet" href="assets/sweatalert/dist/sweetalert.css">
 
   <style>
+  #hitmundur { width: 240px; height: 45px; }
   .link{display:inline-block;}
   .tooltip1{
       /*Terserah desainnya bagaimana~*/
