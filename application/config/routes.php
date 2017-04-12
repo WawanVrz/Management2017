@@ -71,3 +71,5 @@ $route['dashboard/admin/data/soal/list'] = 'soalcontroller';
 $route['dashboard/admin/data/soal/add'] = 'soalcontroller/tambah_soal';
 $route['dashboard/admin/data/soal/edit/(:any)'] = 'soalcontroller/edit_soal/$1';
 $route['dashboard/admin/data/soal/list/bin'] = 'soalcontroller/viewbin';
+
+$route['api/count/list/score']['get'] = 'scorecontroller/GetScoreList';

@@ -33,6 +33,9 @@
 <!-- DataTables -->
 <script src="assets/dashboard/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="assets/dashboard/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- <script src="assets/time/jquery.min.js"></script> -->
+<script src="assets/time/jquery.plugin.js"></script>
+<script src="assets/time/jquery.countdown.js"></script>
 <script>
   $(function () {
   //  $("#example1").DataTable();

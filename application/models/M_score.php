@@ -1,64 +1,42 @@
 <?php
 
-class m_soal extends CI_Model
+class m_score extends CI_Model
 {
 	function tampil_data()
 	{
 		$this->db->select("*");
-    	$this->db->from("soal");
+    	$this->db->from("score");
 		$this->db->where("status","1");
-	    $this->db->order_by("id_soal", "DESC");
+	    $this->db->order_by("id_score", "ASC");
 	    $query = $this->db->get();
 	    return $query;
 	}
-
-	function tampil_data_public1()
-	{
-		$this->db->select("*");
-    	$this->db->from("soal");
-		$this->db->where("status","1");
-	    $this->db->limit(1);
-	    $query = $this->db->get();
-	    return $query;
-	}
-
-	function tampil_data_public2()
-	{
-		$this->db->select("*");
-    	$this->db->from("soal");
-		$this->db->where("status","1");
-	    $this->db->limit(1);
-	    $this->db->order_by("id_soal", "DESC");
-	    $query = $this->db->get();
-	    return $query;
-	}
-
 
 	function tampil_data_bin()
 	{
 		$this->db->select("*");
-    	$this->db->from("soal");
+    	$this->db->from("score");
 		$this->db->where("status","0");
-	    $this->db->order_by("id_soal", "DESC");
+	    $this->db->order_by("id_score", "ASC");
 	    $query = $this->db->get();
 	    return $query;
 	}
 
 	function cek_jumlah($table){
 		$this->db->select("*");
-    	$this->db->from("soal");
+    	$this->db->from("score");
 		$this->db->where("status","1");
-	    $this->db->order_by("id_soal", "DESC");
+	    $this->db->order_by("id_score", "ASC");
 	    $query = $this->db->get();
 	    return $query;
 	}
 
-	function cek_jumlah_sampah(){
-		
+	function cek_jumlah_sampah()
+	{	
 		$this->db->select("*");
-    	$this->db->from("soal");
+    	$this->db->from("score");
 		$this->db->where("status","0");
-	    $this->db->order_by("id_soal", "DESC");
+	    $this->db->order_by("id_score", "ASC");
 	    $query = $this->db->get();
 	    return $query;
 	}
@@ -85,5 +63,14 @@ class m_soal extends CI_Model
 	function update_data($where,$data,$table){
 		$this->db->where($where);
 		$this->db->update($table,$data);
+	}
+
+	function getscore()
+	{
+		$this->db->select("*");
+    	$this->db->from("score");
+		$this->db->where("status","1");
+	    $query = $this->db->get();
+	    return $query;
 	}
 }
